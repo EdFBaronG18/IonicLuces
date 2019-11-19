@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { EstadoLucesService } from '../services/estado-luces.service';
 
 @Component({
   selector: 'app-home',
@@ -7,6 +8,20 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  estado = {};
 
+  constructor(private status: EstadoLucesService) {
+
+    this.status.getStatus().subscribe(res => {
+      this.estado = res;
+    });
+  }
+
+  setStatusLuces() {
+    console.log(this.estado);
+    this.status.setStatus(this.estado).subscribe();
+  }
+  segmentChanged(ev){
+   // 
+  }
 }

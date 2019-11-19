@@ -1,1 +1,13 @@
+.card {
+  margin: 10px 0px;
+  border: 1px solid var(--ion-color-primary);
+}
 
+.card > ion-item > ion-label {
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.card>ion-segment > ion-segment-button{
+    background-color: rgb(236, 236, 236);
+}

@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  urlGetStatus: 'http://localhost:3000/aptos/aptoStatus',
+  urlSetStatus: 'http://localhost:3000/aptos/changeAptoStatusBody'
 };
 
 /*

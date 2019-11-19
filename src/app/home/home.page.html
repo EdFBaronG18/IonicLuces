@@ -1,14 +1,97 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Ionic Blank
+      CUARTO LUCES
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <div class="ion-padding">
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
+    <ion-card>
+      <ion-card-header>
+        <ion-card-subtitle>Controla las luces de tu casa</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+        <div class="card">
+          <ion-item lines="none">
+            <ion-label text-center>Luz Baño</ion-label>
+          </ion-item>
+          <ion-segment (ionChange)="segmentChanged($event)" [(ngModel)]="estado.luzBano" (click)="setStatusLuces()">
+            <ion-segment-button  value=true>
+              <ion-label>On</ion-label>
+            </ion-segment-button>
+            <ion-segment-button value=false>
+              <ion-label>Off</ion-label>
+            </ion-segment-button>
+          </ion-segment>
+        </div>
+        <div class="card">
+          <ion-item lines="none">
+            <ion-label text-center>Luz Cocina</ion-label>
+          </ion-item>
+          <ion-segment (ionChange)="segmentChanged($event)" [(ngModel)]="estado.luzCocina" (click)="setStatusLuces()">
+            <ion-segment-button value=true>
+              <ion-label>On</ion-label>
+            </ion-segment-button>
+            <ion-segment-button value=false>
+              <ion-label>Off</ion-label>
+            </ion-segment-button>
+          </ion-segment>
+        </div>
+        <div class="card">
+          <ion-item lines="none">
+            <ion-label text-center>Habitacion 1</ion-label>
+          </ion-item>
+          <ion-segment (ionChange)="segmentChanged($event)" [(ngModel)]="estado.luzHabitacion1" (click)="setStatusLuces()">
+            <ion-segment-button value=true>
+              <ion-label>On</ion-label>
+            </ion-segment-button>
+            <ion-segment-button value=false>
+              <ion-label>Off</ion-label>
+            </ion-segment-button>
+          </ion-segment>
+        </div>
+        <div class="card">
+          <ion-item lines="none">
+            <ion-label text-center>Habitacion 2</ion-label>
+          </ion-item>
+          <ion-segment (ionChange)="segmentChanged($event)" [(ngModel)]="estado.luzHabitacion2" (click)="setStatusLuces()">
+            <ion-segment-button value=true>
+              <ion-label>On</ion-label>
+            </ion-segment-button>
+            <ion-segment-button value=false>
+              <ion-label>Off</ion-label>
+            </ion-segment-button>
+          </ion-segment>
+        </div>
+        <div class="card">
+          <ion-item lines="none">
+            <ion-label text-center>Habitacion 3</ion-label>
+          </ion-item>
+          <ion-segment (ionChange)="segmentChanged($event)" [(ngModel)]="estado.luzHabitacion3" (click)="setStatusLuces()">
+            <ion-segment-button value=true>
+              <ion-label>On</ion-label>
+            </ion-segment-button>
+            <ion-segment-button value=false>
+              <ion-label>Off</ion-label>
+            </ion-segment-button>
+          </ion-segment>
+        </div>
+        <div class="card">
+          <ion-item lines="none">
+            <ion-label text-center>Habitacion 4</ion-label>
+          </ion-item>
+          <ion-segment (ionChange)="segmentChanged($event)" [(ngModel)]="estado.luzHabitacion4" (click)="setStatusLuces()">
+            <ion-segment-button value=true>
+              <ion-label>On</ion-label>
+            </ion-segment-button>
+            <ion-segment-button value=false>
+              <ion-label>Off</ion-label>
+            </ion-segment-button>
+          </ion-segment>
+        </div>
+      </ion-card-content>
+    </ion-card>
   </div>
 </ion-content>
